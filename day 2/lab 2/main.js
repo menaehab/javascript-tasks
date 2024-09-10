@@ -1,4 +1,9 @@
-let s = prompt("enter a string");
-let r = s.split("").reverse().join("");
-if (s == r) alert("Palindrome");
-else alert("Not Palindrome");
+let text = prompt("Enter a string");
+let isSensitive = confirm("Do you want to consider case sensitivity?");
+let original = isSensitive ? text : text.toLowerCase();
+let reversed = original.split("").reverse().join("");
+if (original === reversed) {
+  alert("Palindrome");
+} else {
+  alert("Not Palindrome");
+}
